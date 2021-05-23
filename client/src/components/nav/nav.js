@@ -1,6 +1,6 @@
 import React from "react";
 
-function nav(props) {
+function Nav(props) {
   return (
     <div>
         <div class="jumbotron jumbotron-fluid">
@@ -13,4 +13,4 @@ function nav(props) {
   );
 }
 
-export default nav;
+export default Nav;

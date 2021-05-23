@@ -1,6 +1,7 @@
 import React from "react";
+import card from "./card";
 
-function cardContainer(props) {
+function CardContainer(props) {
   return (
     <div>
        <div className="container" onClick={() => this.props.handler(this.props.id)}>
@@ -12,4 +13,4 @@ function cardContainer(props) {
   );
 }
 
-export default cardContainer;
+export default CardContainer;

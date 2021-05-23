@@ -1,6 +1,6 @@
 import React from "react";
 
-function hero(props) {
+function Hero(props) {
   return (
     <div>
         <div class="jumbotron jumbotron-fluid">
@@ -13,6 +13,6 @@ function hero(props) {
   );
 }
 
-export default hero;
+export default Hero;
 
 
