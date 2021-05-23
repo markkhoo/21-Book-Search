@@ -16,4 +16,8 @@ router
     .route("/:id")
     .delete(postsController.remove);
 
+router
+    .route("/google/:book")
+    .post(postsController.googleBooks)
+
 module.exports = router;
