@@ -6,7 +6,7 @@ function Search() {
   const [books,setBooks] = useState([]);
 
   const handleSetInput = (event) => {
-    console.log("*********input",event.target.value);
+    console.log("*********input", event.target.value);
     setInput(event.target.value)
   }
   
