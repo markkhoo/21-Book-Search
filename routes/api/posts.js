@@ -18,6 +18,6 @@ router
 
 router
     .route("/google/:book")
-    .post(postsController.googleBooks)
+    .get(postsController.googleBooks)
 
 module.exports = router;

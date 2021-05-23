@@ -1,8 +1,4 @@
-import React, { useContext } from "react";
-import Hero from "../components/hero"
-
-import Searchbar from "../components/searchbar";
-import CardContainer from "../cardContainer";
+import React, { useContext, useState } from "react";
 import axios from "axios"
 function Search() {
   const [search, setSearch] = useState("");
@@ -10,12 +6,14 @@ function Search() {
   const [books,setBooks] = useState([]);
 
   const handleSetInput = (event) => {
+    console.log("*********input",event.target.value);
     setInput(event.target.value)
   }
-
+  
   const handleBookSearch = () => {
+    console.log("*********book")
     //get  book data from server route
-    axios.post(`/api/books/google/${input}`).then((res) => {
+    axios.get(`/api/books/google/${input}`).then((res) => {
       console.log("*******",res)
     });
   }
@@ -24,17 +22,17 @@ function Search() {
 
   return (
 
-    <div class="input-group mb-3">
+    <div className="input-group mb-3">
       <input 
         type="text" 
-        class="form-control"
+        className="form-control"
         placeholder="Recipient's username" 
         aria-label="Recipient's username" 
         aria-describedby="button-addon2"
         onChange={handleSetInput} 
       />
-      <div class="input-group-append">
-          <button onClick={handleBookSearch} class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+      <div className="input-group-append">
+          <button onClick={handleBookSearch} className="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
       </div>
     </div>
 

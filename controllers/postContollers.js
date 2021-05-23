@@ -30,9 +30,15 @@ module.exports = {
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
-    googleBooks: function(req, res) {
-      axios.get(`https://www.googleapis.com/books/v1/volumes?q=${req.params.book}`).then((data) => {
-        res.json(data);
-      });
-    }
+    
 };
+          
+//bookmatch is the name of the database
+
+
+
+
+
+
+
+
