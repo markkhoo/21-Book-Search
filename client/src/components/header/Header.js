@@ -1,26 +1,44 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./Header.css";
 
 function Header(props) {
   return (
     <div>
-      <div class="jumbotron jumbotron-fluid">
+      <div class="jumbotron jumbotron-fluid text-center">
         <div class="container">
-          <h1 class="display-4">Fluid jumbotron</h1>
-          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+          <h1 class="display-4">Book Search</h1>
+          <p class="lead">Search for any book you like!!</p>
         </div>
       </div>
       {/* -----Navbar----- */}
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <nav class="navbar navbar-expand-lg bg-dark">
+        
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Pricing</a>
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <Link
+              to="/"
+              className={
+                window.location.pathname === "/" || window.location.pathname === "/search"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              Search
+            </Link>
+
+            <Link
+              to="/saved"
+              className={
+                window.location.pathname === "/saved" || window.location.pathname === "/saved"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              Saved
+            </Link>
+
+            
           </div>
         </div>
       </nav>

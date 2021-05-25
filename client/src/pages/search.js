@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import axios from "axios"
 import Header from "../components/header/Header"
 import CardContainer from "../components/cardComponent/cardContainer"
+import "./search.css"
 
 function Search() {
   const [search, setSearch] = useState("");
@@ -37,7 +38,7 @@ function Search() {
             onChange={handleSetInput}
           />
           <div className="input-group-append">
-            <button onClick={handleBookSearch} className="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+            <button onClick={handleBookSearch} className="btn btn-outline-secondary" type="button" id="button-addon2">Search For Books</button>
           </div>
         </div>
       {/* ---------CARD---------- */}
