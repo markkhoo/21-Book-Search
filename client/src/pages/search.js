@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
-import axios from "axios"
-import Header from "../components/header/Header"
-import CardContainer from "../components/cardComponent/cardContainer"
-import "./search.css"
+import API from "../utils/API";
+import Header from "../components/header/Header";
+import CardContainer from "../components/cardComponent/cardContainer";
+import "./search.css";
 
 function Search() {
   const [search, setSearch] = useState("");
@@ -17,7 +17,7 @@ function Search() {
   const handleBookSearch = () => {
     console.log("*********book")
     //get  book data from server route
-    axios.get(`/api/books/google/${input}`).then((res) => {
+    API.searchBooks(input).then((res) => {
       console.log("*******", res)
     });
   }
