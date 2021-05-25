@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@300&display=swap');
+
 .jumbotron {
-   
-    background-color: crimson;
+    background-color: #1d2124c4;
     color: white;
-    font-family:'Bree Serif';
+    font-family: 'Farro', sans-serif;
     
   }
   .navbar {
