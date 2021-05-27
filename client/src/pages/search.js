@@ -1,8 +1,9 @@
 import React, { useContext, useState } from "react";
-import API from "../utils/API";
-import Header from "../components/header/Header";
-import CardContainer from "../components/cardComponent/cardContainer";
-import "./search.css";
+import axios from "axios"
+import Header from "../components/header/Header"
+import CardContainer from "../components/cardComponent/cardContainer"
+import "./search.css"
+import { List, ListItem } from "../components/List";
 
 function Search() {
   const [search, setSearch] = useState("");
@@ -17,11 +18,20 @@ function Search() {
   const handleBookSearch = () => {
     console.log("*********book")
     //get  book data from server route
-    API.searchBooks(input).then((res) => {
+    axios.get(`/api/books/google/${input}`).then((res) => {
+
+      setBooks(res.data)
+
+
       console.log("*******", res)
     });
   }
-
+const handleBookSave = (book) => {
+  axios.post("/api/books", {
+    title: books.title,
+  })
+  console.log(book)
+}
 
 
   return (
@@ -42,7 +52,85 @@ function Search() {
           </div>
         </div>
       {/* ---------CARD---------- */}
-      <CardContainer />
+      {books.length ? (
+
+
+                  
+              <List>
+                {books.map(book => {
+                  return (
+                    <ListItem key={book._id}>
+                       <div>
+            <div className="container">
+              
+              <div className="card mb-3">
+                <div className="row no-gutters">
+                  <div className="col-md-4">
+                    <img src={book.volumeInfo.imageLinks.thumbnail} alt="..."/>
+                  </div>
+                    <div className="col-md-8">
+                      <div className="card-body">
+                        <h5 className="card-title">{book.volumeInfo.title}</h5>
+                        <p className="card-text">{book.volumeInfo.description}</p>
+                        <p className="card-text"><small className="text-muted">{book.volumeInfo.authors}</small></p>
+                        <button onClick={ ()=> handleBookSave(book) } className="btn btn-outline-secondary" type="button" id="button-addon2">save</button>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+              </div>
+            </div>
+                    </ListItem>
+                  );
+                })}
+              </List>
+            ) : (
+              <h3>No Results to Display</h3>
+            )} 
+      
+      {/* {books.length ? (  
+
+        {
+          books.map(post => (
+            <div>
+            <div className="container">
+              
+              <div className="card mb-3">
+                <div className="row no-gutters">
+                  <div className="col-md-4">
+                    <img src="{book.name}" alt="..."/>
+                  </div>
+                    <div className="col-md-8">
+                      <div className="card-body">
+                        <h5 className="card-title">{book.name}</h5>
+                        <p className="card-text">{book.description}</p>
+                        <p className="card-text"><small className="text-muted">{book.name}</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+              </div>
+            </div>
+          )
+        }
+     )} */}
+
+
+
+
+      {/* { books.length ? (
+               
+              {books.map(book => {
+                return (
+                  <CardContainer />
+                );
+              })}
+
+      )} */}
+
 
     </div>
 

@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import axios from "axios";
-
-export default {
-  // Gets all books
-  getBooks: function(bookName) {
-    return axios.get("https://www.googleapis.com/books/v1/volumes?q="+bookName);
-  },
-
-};
-=======
 import axios from 'axios';
 
 const API = {
@@ -27,4 +16,3 @@ const API = {
 };
 
 export default API;
->>>>>>> 3322c3f0a9e40012fe8b9f6ef698becffb11131e
