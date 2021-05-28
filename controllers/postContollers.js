@@ -34,7 +34,7 @@ module.exports = {
           axios
             .get(`https://www.googleapis.com/books/v1/volumes?q=${req.params.book}`)
             .then(response =>
-              response.data.items.filter(
+              response.book.items.filter(
                 book =>
                   book.volumeInfo.title &&
                   book.volumeInfo.infoLink &&

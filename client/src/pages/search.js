@@ -22,7 +22,23 @@ function Search() {
     });
   }
 
-
+// const renderProjectCards = () => {
+//   let result = null;
+//   if (books) {
+//     result = books.map((book) => {
+//       if (book) {
+//         return (
+//           <CardContainer 
+//                         key={book.volumeInfo.title}
+//                         book={book}
+//           />
+//         )
+//       }
+//       return null;
+//     });
+//   }
+//   return result;
+// }
 
   return (
     <div>
@@ -43,6 +59,7 @@ function Search() {
         </div>
       {/* ---------CARD---------- */}
       <CardContainer />
+      {renderProjectCards()}
 
     </div>
 
