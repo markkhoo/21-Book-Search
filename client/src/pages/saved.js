@@ -22,26 +22,14 @@ function Saved() {
 
 
 
-
-
-
-
-
     const handleBookDelete = (book) => {
-        console.log(book)
-        axios.delete("/api/books/:id",{data:{ _id: book._id }})
-        
+        console.log(book._id)
+        axios.delete(`/api/books/${book._id}`)
+        .then((response)=> {
+            console.log(response.data);
+            })        
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     return (
         <div>
