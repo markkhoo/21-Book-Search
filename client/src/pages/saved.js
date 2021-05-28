@@ -9,6 +9,7 @@ import Header from "../components/header/Header"
 function Saved() {
 
     const [books, setBooks] = useState([]);
+    const [hello, setHello] = useState([]);
 
 
 
@@ -18,7 +19,9 @@ function Saved() {
           setBooks(res.data)
           console.log (res.data)
         });
-    },[])
+
+
+    },[hello])
 
 
 
@@ -27,7 +30,10 @@ function Saved() {
         axios.delete(`/api/books/${book._id}`)
         .then((response)=> {
             console.log(response.data);
-            })        
+            });
+        
+            setHello (Math.random())
+            
     }
 
     
