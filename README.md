@@ -1,29 +1,59 @@
-# Create React Express App
+# Google Books Search
 
-## About This Boilerplate
+## Site Picture
+![Site]()
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+## Technologies Used
+- Javascript - adds special effects on pages
+- Node.js - an open source server environment that uses JavaScript on the server
+- React - a JavaScript library for building user interfaces
+- Express - a Node.js web application framework that provides a robust set of features for web and mobile applications.
+- MongoDB - stores data in JSON-like documents. 
+- GitBash - for cloning repository and pushing code to GitHub
+- GitHub - holds repository that deploys to GitHub Pages
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+# Summary
+This file contains code that creates a React-based Google Books Search app. It allows the user so search snd save books based on what they input in the search bar. It also contains code that was created using Javascript, React and Node.js. 
 
-## Starting the app locally
+## Code Snippet
+```javascript
+function App() {
+  return (
+    <div className="App">
+      <Router>
+        <div>
+        
+          <Route exact path="/" component={Search} />
+          <Route exact path="/home" component={Search} />
+          <Route exact path="/saved" component={Saved} />
+        </div>
+      </Router>
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
-
+    </div>
+  );
+}
 ```
-npm install
+
+```javascript
+<javascript>
+
+</javascript>
 ```
 
-This should install node modules within the server and the client folder.
+## Author Links 
 
-After both installations complete, run the following command in your terminal:
+Mark Khoo <br />
+[Linkedin](https://github.com/markkhoo) <br />
+[Github](https://www.linkedin.com/in/markdkhoo/)
 
-```
-npm start
-```
+Javier Mondragon <br />
+[Linkedin](https://www.linkedin.com/in/javier-mondragon-7b471719b/) <br />
+[Github](https://github.com/javimarashall)
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+Manuel Villasenor <br />
+[LinkedIn](https://www.linkedin.com/in/manuel-villasenor-854186205/)<br />
+[GitHub](https://github.com/manuelvrsr)
 
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+Rosario Miranda <br />
+[LinkedIn](https://www.linkedin.com/in/rosario-miranda-b81170132/)<br />
+[GitHub](https://github.com/rtmiranda18)
