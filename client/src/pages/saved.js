@@ -6,7 +6,6 @@ import CardContainer from "../components/cardComponent/cardContainer"
 function Saved() {
     
     const handleBookDelete = (book) => {
-
         
     }
 
