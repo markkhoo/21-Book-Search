@@ -4,8 +4,8 @@ const API = {
     getBooks: () => {
         return axios.get('/api/books')
     },
-    postBook: () => {
-        return axios.post('/api/books')
+    postBook: (postData) => {
+        return axios.post('/api/books', postData)
     },
     deleteBook: (id) => {
         return axios.delete(`/api/books/${id}`)
