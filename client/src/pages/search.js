@@ -5,6 +5,8 @@ import CardContainer from "../components/cardComponent/cardContainer"
 import "./search.css"
 import { List, ListItem } from "../components/List";
 
+
+
 function Search() {
   const [search, setSearch] = useState("");
   const [input, setInput] = useState("");
@@ -26,13 +28,23 @@ function Search() {
       console.log("*******", res)
     });
   }
+
 const handleBookSave = (book) => {
   axios.post("/api/books", {
-    title: books.title,
+    title: book.volumeInfo.title,
+    author: book.volumeInfo.authors,
+    description: book.volumeInfo.description,
+    image: book.volumeInfo.imageLinks.thumbnail,
+    link: book.volumeInfo.infoLink
   })
+  .then(function (response) {
+    console.log(response);
+  })
+
+
+
   console.log(book)
 }
-
 
   return (
     <div>

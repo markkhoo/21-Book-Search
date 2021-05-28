@@ -4,6 +4,22 @@ import Header from "../components/header/Header"
 import CardContainer from "../components/cardComponent/cardContainer"
 
 function Saved() {
+    
+    const handleBookDelete = (book) => {
+
+        
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     return (
         <div>
             <Header />
