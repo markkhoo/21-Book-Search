@@ -1,7 +1,7 @@
 # Google Books Search
 
 ## Site Picture
-![Site]()
+![Site](googlebooksearch.png)
 
 ## Technologies Used
 - Javascript - adds special effects on pages
@@ -13,7 +13,7 @@
 - GitHub - holds repository that deploys to GitHub Pages
 
 # Summary
-This file contains code that creates a React-based Google Books Search app. It allows the user so search snd save books based on what they input in the search bar. It also contains code that was created using Javascript, React and Node.js. 
+This file contains code that creates a React-based Google Books Search app. It allows the user so search snd save books based on what they input in the search bar. It also contains code that was created using Javascript, React and Node.js. You can visit the application [HERE](https://fathomless-coast-53268.herokuapp.com/).
 
 ## Code Snippet
 ```javascript

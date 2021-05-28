@@ -1,8 +1,6 @@
 import React, { useContext, useState } from "react";
-import axios from "axios"
 import API from "../utils/API";
 import Header from "../components/header/Header"
-import CardContainer from "../components/cardComponent/cardContainer"
 import "./search.css"
 import { List, ListItem } from "../components/List";
 
