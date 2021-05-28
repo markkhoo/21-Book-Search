@@ -1,7 +1,7 @@
 # Google Books Search
 
 ## Site Picture
-![Site]()
+![Site](googlebooksearch.png)
 
 ## Technologies Used
 - Javascript - adds special effects on pages
